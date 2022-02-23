@@ -9,7 +9,7 @@ dobs = [
     },
     {
         "name": "Sally",
-        "birth_date": "2003-04-14"
+        "birth_date": "2002-09-30"
     },
     {
         "name": "Emma",
@@ -44,7 +44,17 @@ dobs = [
 # element = [dobs[index] for index in num]
 # print(element)
 
-a = input("enter name from list given : ")
-for i in list(dobs):
-    if i["name"] == a:
-        print(i["birth_date"])
+
+def get_names(birth_date):
+    names = []
+    for i in list(dobs):
+        c = birth_date.split("-")
+        month_date = c[1] + "-" + c[2]
+        if i["birth_date"] == birth_date:
+            names.append(i["name"])
+        print(month_date)
+    return names
+
+
+a = get_names("2002-09-30")
+print(a)
