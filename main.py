@@ -40,8 +40,11 @@ dobs = [
         "birth_date": "2000-04-22"
     }
 ]
-num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-element = [dobs[index] for index in num]
-print(element)
+# num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+# element = [dobs[index] for index in num]
+# print(element)
 
-
+a = input("enter name from list given : ")
+for i in list(dobs):
+    if i["name"] == a:
+        print(i["birth_date"])
